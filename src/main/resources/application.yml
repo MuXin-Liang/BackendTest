@@ -1,0 +1,25 @@
+server:
+  port: 9090
+
+bsn:
+  appCode: app0026265652ebf6b4160b1f3fb1664925f40
+  userCode: USER0001202101221930341331977
+  api: http://52.83.209.158:17502
+  prk: classpath:bsn/userAppCert/sm2/private_key.pem
+  puk: classpath:bsn/userAppCert/sm2/public_key.pem
+  mspDir: bsn/fabricMsp/
+  userid: test22
+
+contract:
+  tort_addr: '0x3c96a998ff962f03ace777aec3592bd1569c9626'
+  tort_name: TortTest10
+  tort_abi: '[{"constant":false,"inputs":[{"name":"info","type":"string[]"}],"name":"insert","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"username","type":"string"}],"name":"selectByAuthor","outputs":[{"name":"","type":"string[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"content","type":"string"}],"name":"checkRecordExist","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"createTable","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"content","type":"string"}],"name":"selectByContent","outputs":[{"name":"","type":"string[]"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]'
+
+
+  evidence_addr: '0x5ff1f0daafa027199d68a93653c08c3ee2b664cd'
+  evidence_name: EvidenceTest10
+  evidence_abi: '[{"constant":false,"inputs":[{"name":"info","type":"string[]"}],"name":"insert","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"username","type":"string"}],"name":"selectByAuthor","outputs":[{"name":"","type":"string[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"content","type":"string"}],"name":"checkRecordExist","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"createTable","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"content","type":"string"}],"name":"selectByContent","outputs":[{"name":"","type":"string[]"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]'
+
+  authority_addr: '0xf861ca54445fd3e65a645bd343ce4466fbde7579'
+  authority_name: AuthorityTest10
+  authority_abi: '[{"constant":false,"inputs":[{"name":"info","type":"string[]"}],"name":"insert","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"username","type":"string"}],"name":"selectByAuthor","outputs":[{"name":"","type":"string[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"content","type":"string"}],"name":"checkRecordExist","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"createTable","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"content","type":"string"}],"name":"selectByContent","outputs":[{"name":"","type":"string[]"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]'
