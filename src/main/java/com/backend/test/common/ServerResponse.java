@@ -1,4 +1,4 @@
-package com.blockchain.browser.common;
+package com.backend.test.common;
 
 /**
  * @ Description：统一返回类
@@ -7,12 +7,20 @@ package com.blockchain.browser.common;
 import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class ServerResponse {
-    Integer status;      //成功 or 失败
+    String status;      //成功 or 失败
     Integer code;       //响应状态码
     String message;			//响应信息
     Object data;		//响应数据
+    long timestamp;
+
+    public ServerResponse(){
+        super();
+        timestamp = new Date().getTime();
+    }
 
     public static  ServerResponse getInstance() {
         return new ServerResponse();
@@ -40,12 +48,16 @@ public class ServerResponse {
     }
 
     public ServerResponse ok(){
-        this.status = 0;
+        this.status = "success";
+        this.code = ResponseEnum.SUCCESS.code;
+        this.message = ResponseEnum.SUCCESS.message;
         return (ServerResponse) this;
     }
 
     public ServerResponse failed(){
-        this.status = 1;
+        this.status = "failed";
+        this.code = ResponseEnum.FAILED.code;
+        this.message = ResponseEnum.FAILED.message;
         return (ServerResponse) this;
     }
 
@@ -70,11 +82,11 @@ public class ServerResponse {
         return message;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -88,6 +100,14 @@ public class ServerResponse {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
     //测试

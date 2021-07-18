@@ -1,13 +1,13 @@
-package com.blockchain.browser;
+package com.backend.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlockChainBrowserApplication {
+public class BackendTestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BlockChainBrowserApplication.class, args);
+		SpringApplication.run(BackendTestApplication.class, args);
 	}
 
 }
